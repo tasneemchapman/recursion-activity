@@ -29,10 +29,15 @@ public final class CountDown {
      * implement this implement the method and
      */
     public static void countDownThenUp(int n) {
-        // todo
+        for (int i = n; i >= 1; i--) {
+            System.out.println(i);
+        }
+        for (int i = 1; i <= n; i++) {
+            System.out.println(i);
+        }
     }
 
-    /**
+    /*
      * We have a number of bunnies and each bunny has
      * two big floppy ears.
      * <p>
@@ -47,7 +52,10 @@ public final class CountDown {
      * </code></pre>
      */
     public static int bunnyEars(int n) {
-        // "method stub"
-        return 0;
+        if (n == 0) {
+            return 0;
+        }
+        return 2 + bunnyEars(n - 1);
+
     }
 }
